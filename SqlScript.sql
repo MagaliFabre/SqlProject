@@ -78,7 +78,7 @@ CREATE TABLE order_menu_items (
     FOREIGN KEY (menu_item_id) REFERENCES menu_items (menu_item_id)
 );
 
-DETAILS: 
+/* DETAILS: 
 
 Clients Table:
 Purpose: The clients table stores information about ExpressFood clients or customers who place orders for meals.
@@ -134,3 +134,28 @@ Copy and paset 3 - 5 insert statements for the table or multiple tables
 Get the path of that file
 run the seed file using the source command
 https://dev.mysql.com/doc/refman/8.0/en/mysql-batch-commands.html
+
+*/ 
+
+INSERT INTO clients (name, address, phone, email) VALUES
+    ('John Doe', '123 Main Street', '555-123-4567', 'john@example.com'),
+    ('Alice Smith', '456 Elm Avenue', '555-987-6543', 'alice@example.com'),
+    ('Bob Johnson', '789 Oak Road', '555-111-2222', 'bob@example.com'),
+    ('Eva Martinez', '567 Pine Lane', '555-333-4444', 'eva@example.com'),
+    ('Michael Lee', '890 Cedar Drive', '555-555-5555', 'michael@example.com'),
+    ('Sara Wilson', '234 Birch Street', '555-777-8888', 'sara@example.com'),
+    ('Daniel Brown', '678 Redwood Avenue', '555-999-0000', 'daniel@example.com'),
+    ('Sophia Davis', '456 Spruce Lane', '555-222-3333', 'sophia@example.com'),
+    ('William Wilson', '987 Elm Street', '555-444-5555', 'william@example.com'),
+    ('Emma Harris', '123 Maple Road', '555-666-7777', 'emma@example.com');
+
+INSERT INTO delivery_people (name, phone) VALUES
+    ('David Miller', '555-111-2222'),
+    ('Maria Sanchez', '555-333-4444'),
+    ('James Clark', '555-555-5555'),
+    ('Olivia Turner', '555-777-8888'),
+    ('Daniel Brown', '555-999-0000');
+
+INSERT INTO menu_items (name, description, price) VALUES
+    ('Spaghetti Bolognese', 'Classic Italian pasta dish', 12.99),
+    ('Chicken Caesar Salad', 'Fresh greens with grilled chicken', 10.49);
